@@ -4,7 +4,7 @@
 
 >  사용 데이터베이스 : mySQL
 
-
+<br/>
 
 table -> erd 관계 설정
 
@@ -22,7 +22,7 @@ erd -> table로 가져오기
 
 ```java
 // 1 : N
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "{object}")
+@OneToMany(fetch = FetchType.LAZY, mappedBy = "{object}")
 ```
 
 1 : N ->  @OneToMany 어노테이션을 붙임
@@ -67,9 +67,8 @@ private User user; // user_id
 
    => 1: N, N:1 관계만 잘 이해하면 여러 조인 필요없이 체이닝방식을 사용하면 된다.
 
-
-
-
+<br/>
+<br/>
 
 패스트캠퍼스 자바 웹 개발 마스터 강의를 듣고 공부한 내용을 정리했습니다. 
 
