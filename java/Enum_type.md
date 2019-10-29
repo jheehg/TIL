@@ -15,9 +15,9 @@ static으로 상수를 선언하는 것보다 좀 더 간결한 코드를 작성
 ```java
 public enum EnumTest {
 	ENUM1(0, "첫번째"), ENUM2(1, "두번째"), ENUM3(2, "세번째");
-  
-  private int id;
-  private String order;
+	
+	private int id;
+	private String order;
 }
 ```
 
@@ -42,7 +42,7 @@ EnumType.STRING, EnumType.ORDINAL 두가지 타입으로 사용 가능하다.
 
 
 
-프론트로부터 들어오는 데이터를 Enum으로 관리하면 범위에 맞는 값이 들어올 때 오류를 발생시킨다.
+프론트로부터 들어오는 데이터를 Enum으로 관리하면 범위내에 속한 값이 아닐 때 오류를 발생시킨다.
 
 주의할 점은 Enum을 사용하여 데이터를 관리할 경우 설계 초기부터 이루어져야 한다.
 
