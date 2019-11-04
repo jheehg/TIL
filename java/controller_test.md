@@ -13,7 +13,7 @@ andExpect() 를 통해 리턴값으로 결과가 맞게 나왔는지 체크한�
   // value() 에 기대하는 결과값을 넣어 검증을 진행한다. 
   // 또는
 .andExpect(jsonPath("$.address").isEmpty());
-	// or isNumber(); isEmpty(); 등 타입체크, 빈값 체크도 가능하다  
+  // or isNumber(); isEmpty(); 등 타입체크, 빈값 체크도 가능하다  
 
 ```
 
@@ -72,7 +72,7 @@ stream 클래스의 .anyMatch() 를 통해  이미 삭제된 목록에 데이터
 
 ```java
 assertTrue(personRepository.findPeopleDeleted().stream()
-        									 .anyMatch(person -> person.getId().equals(1L)));
+        		   .anyMatch(person -> person.getId().equals(1L)));
 
 ```
 
