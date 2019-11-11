@@ -24,7 +24,7 @@ SecurityConfig class에서도 ```csrf().disable()``` 을 해준 상태였다.
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Value("${jwt.secret}") // => @Value("${spring.jwt.secret}") 로 변경해야 함
+    @Value("${jwt.secret}") // value설정 오류
     private String secret;
   	...
 }
@@ -36,4 +36,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 Security 사용한 뒤부터 계속 같은 오류였는데 드디어 찾음....😱
 
+==> ( 꼭 spring으로 지정해야 하는 건 아니고 jwt.secret / security.jwt.secret 등으로 해도 되지만
+
+​		어떻게 지정해야 맞는 방법인지 잘 모르겠다. 이 부분은 더 찾아봐야 겠다.
+
+​		오류난 시점의 설정이 spring의 하위 속성으로 있었기때문에 아예 spring에서 빼주고 jwt.secret으로 변경했다 )
+
 Spring security는 로그인 처리하는 부분 더 공부하면서 이해해야 할 것 같다 
+
