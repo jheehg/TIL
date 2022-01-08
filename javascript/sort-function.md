@@ -56,7 +56,7 @@ console.log(numArr); // [1, 3, 5, 44, 100]
 ```javascript
 let charArr = ["a", "d", "c", "a", "z", "g"];
 charArr.sort((a, b) => a > b);
-console.log(charArr); // [1, 3, 5, 44, 100]
+console.log(charArr); // ["a", "a", "c", "d", "g", "z"]
 
 /*
 반환값이 0보다 작으면 a의 인덱스가 작은 순으로 정렬.
