@@ -14,17 +14,17 @@
 
 > 반환값
 
-정렬한 배열. 기존 배열이 정렬되는 것으로 복사본이 만들어지는게 아님.
+정렬한 배열. <u>원본 배열이 정렬(변경)</u>되는 것으로 복사본이 만들어지는게 아님.
 
 <br/>
 
 > 비교함수 반환값에 따른 정렬
 
- ```compareFunction(a, b) < 0```  ➡  ascending order
+ ```compareFunction(a, b) < 0```   **a → b** 순으로 위치 변경
 
- ```compareFunction(a, b) > 0```  ➡  descending order
+ ```compareFunction(a, b) > 0```   **b → a** 순으로 위치 변경
 
- ```compareFunction(a, b) === 0```  ➡  변경 없음 (모든 브라우저가 변경없음을 보장하는 것은 아님)
+ ```compareFunction(a, b) === 0```    **변경 없음** (모든 브라우저가 변경없음을 보장하는 것은 아님)
 
 <br/>
 
@@ -43,8 +43,8 @@ console.log(numArr); // [1, 3, 5, 44, 100]
 
 /*
 반환값이 0보다 작으면 a의 인덱스가 작은 순으로 정렬.
-5 - 3 > 0   ==> 둘의 순서를 변경
-3 - 100 < 0 ==> 순서 변경 없음
+5 - 3 > 0   ==>  b -> a 순으로 정렬하므로 5,3 위치 서로 변경
+3 - 100 < 0 ==> a -> b 순으로 정렬하므로 변경 없음.
 ...
 */
 ```
@@ -60,13 +60,11 @@ console.log(charArr); // ["a", "a", "c", "d", "g", "z"]
 
 /*
 반환값이 0보다 작으면 a의 인덱스가 작은 순으로 정렬.
-'a' > 'd' // false(0)  ==> 순서 변경 없음
-'d' > 'c' // true(1)   ==> 둘의 순서를 변경
+'a' > 'd' // false(0)  ==> 0이면 변경 없음
+'d' > 'c' // true(1)   ==> b -> a 순으로 정렬하므로 d,c 위치 서로 변경
 ...
 */
 ```
-
-
 
 <br/>
 
@@ -75,30 +73,3 @@ console.log(charArr); // ["a", "a", "c", "d", "g", "z"]
 References.
 
 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
