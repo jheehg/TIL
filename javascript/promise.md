@@ -23,9 +23,9 @@ new Promise((resolve, reject) => {
 function listPage(URL) {
     return new Promise((resolve, reject) => {
         fetch(URL)
-        .then(response => response.json())
+        .then(response => response.json())
         .then(data => resolve(data))
-        .catch(error => reject(listTxt));
+        .catch(error => reject(error));
     });
 }; 
 ```
@@ -117,10 +117,14 @@ cartPage(URL)
 
 ```
 
+<br/>
+
+<br/>
 
 
 
+**Reference.**
 
-References.
+**[도서] 모던 자바스크립트 딥다이브**
 
-[도서] 모던 자바스크립트 딥다이브
+
